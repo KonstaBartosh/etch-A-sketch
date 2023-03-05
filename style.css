@@ -11,15 +11,13 @@
 }
 
 .grid {
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
 }
 
 .cell {
-    width: 25px;
-    height: 25px;
     background-color: beige;
     border: 1px solid black;
     cursor: pointer;
