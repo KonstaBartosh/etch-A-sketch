@@ -17,7 +17,7 @@ function renderCanvas () {
         //pushing it to emty conteiner
         gridContainer.prepend(cell);
         
-        cell.addEventListener('mouseover', function (evt) { // drawing
+        cell.addEventListener('pointerover', function (evt) { // drawing
             if (evt.buttons === 1) { // check if left button clicked!
                 cell.classList.add('cell_active')
             }
@@ -51,7 +51,7 @@ function resetCanvas(cell) {
 function eraseOnCanvas(cell) {
     ereserButton.addEventListener('click', function (evt) {
         evt.preventDefault();
-        cell.classList.toggle('button_eraser');
+        cell.classList.add('button_eraser');
         cell.addEventListener('mouseover', function (evt) {
             if (evt.buttons === 1) { // check if left button clicked!
                 cell.classList.toggle('cell_active');
