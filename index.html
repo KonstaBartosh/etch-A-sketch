@@ -14,13 +14,27 @@
     </header>
     <main>
         <div class="grid">
-
+            <!-- Элементы -->
         </div>
+        <form action="" class="form">
+            <label for="input" class="label">Grid size</label>
+            <input  id="input"
+                    type="range" 
+                    name="input" 
+                    class="input"
+                    value="16"
+                    max="64"
+                    min="5"
+                    oninput="document.querySelector('output').value = this.value"
+            >
+            <output for="input" id="output">16</output>
+            <button class="submit-button button">Change</button>
+            <button class="reset-button button">Reset</button>
+        </form>
     </main>
     <footer class="footer"></footer>
     <template class="template">
         <div class="cell">
-            <div class="trigger"></div>
         </div>
     </template>
     <script src="./sript.js"></script>
