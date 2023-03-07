@@ -94,6 +94,9 @@
         margin-left: 10;
         flex-direction: column;
     }
+    .button {
+        font-size: 14px;
+    }
     .footer {
         margin-top: 180px;
     }
