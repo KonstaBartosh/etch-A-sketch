@@ -2,7 +2,8 @@ const template = document.querySelector('.template').content; // finding templat
 const gridContainer = document.querySelector('.grid'); // finding empty div container in html
 const form = document.querySelector('.form'); 
 const input = form.querySelector('.input');
-const resetButton = form.querySelector('.reset-button');
+const resetButton = document.querySelector('.reset-button');
+const ereserButton = document.querySelector('.eraser-button');
 
 let gridSize = 16;
 
@@ -21,10 +22,10 @@ function renderCanvas () {
                 cell.classList.add('cell_active')
             }
         });
-        resetButton.addEventListener('click', function() { //reset function
-            cell.classList.remove('cell_active');
-        });
-    }
+
+        resetCanvas(cell);
+        eraseOnCanvas(cell);  
+    } 
 }
 renderCanvas();
 
@@ -37,5 +38,24 @@ function gridSizeHandler() {
         renderCanvas();
     });
 }
-
 gridSizeHandler();
+
+// clearing canvas
+function resetCanvas(cell) {
+    resetButton.addEventListener('click', function () {
+        cell.classList.remove('cell_active');
+    });
+}
+
+// erasing tool
+function eraseOnCanvas(cell) {
+    ereserButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        cell.classList.toggle('button_eraser');
+        cell.addEventListener('mouseover', function (evt) {
+            if (evt.buttons === 1) { // check if left button clicked!
+                cell.classList.toggle('cell_active');
+            }
+        });
+    });
+}

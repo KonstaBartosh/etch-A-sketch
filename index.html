@@ -12,27 +12,34 @@
     <header class="header">
         <h1 class="title">Etch-A-Sketch</h1>
     </header>
-    <main>
-        <div class="grid">
-            <!-- Элементы -->
+    <main class="main">
+        <div class="grid-and-form">
+            <div class="grid">
+                <!-- Элементы -->
+            </div>
+            <form action="" class="form">
+                <label for="input" class="label">Grid size</label>
+                <input  id="input"
+                        type="range" 
+                        name="input" 
+                        class="input"
+                        value="16"
+                        max="64"
+                        min="5"
+                        oninput="document.querySelector('output').value = this.value"
+                >
+                <output for="input" id="output">16</output>
+                <button class="submit-button button">Change</button>
+            </form>
+            <nav class="sidebar">
+                <button class="reset-button button nav-buttons">reset</button>
+                <button class="eraser-button button nav-buttons">erase / draw</button>
+            </nav>
         </div>
-        <form action="" class="form">
-            <label for="input" class="label">Grid size</label>
-            <input  id="input"
-                    type="range" 
-                    name="input" 
-                    class="input"
-                    value="16"
-                    max="64"
-                    min="5"
-                    oninput="document.querySelector('output').value = this.value"
-            >
-            <output for="input" id="output">16</output>
-            <button class="submit-button button">Change</button>
-            <button class="reset-button button">Reset</button>
-        </form>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        Copyright © 2023 KonstaBartosh
+    </footer>
     <template class="template">
         <div class="cell">
         </div>
