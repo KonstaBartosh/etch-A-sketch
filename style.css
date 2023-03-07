@@ -80,8 +80,8 @@
 
 @media screen and (max-width: 600px) {
     .grid{
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
     .form {
         flex-direction: column;
@@ -89,11 +89,22 @@
     .title {
         font-size: 2em;
     }
+    .sidebar {
+        margin-top: -220px;
+        margin-left: 10;
+        flex-direction: column;
+    }
+    .footer {
+        margin-top: 180px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .grid{
         width: 280px;
         height: 280px;
+    }
+    .footer {
+        margin-top: 200px;
     }
 }
