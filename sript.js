@@ -18,10 +18,10 @@ function renderCanvas () {
         gridContainer.prepend(cell);
         
         cell.addEventListener('pointerover', function (evt) { // drawing
-            if (evt.buttons === 1) { // check if left button clicked!
+            // if (evt.buttons === 1) { // check if left button clicked!
                 cell.classList.add('cell_active')
             }
-        });
+        );
 
         resetCanvas(cell);
         eraseOnCanvas(cell);  
