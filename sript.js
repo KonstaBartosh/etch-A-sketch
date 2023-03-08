@@ -51,7 +51,7 @@ function resetCanvas(cell) {
 function eraseOnCanvas(cell) {
     ereserButton.addEventListener('click', function (evt) {
         evt.preventDefault();
-        cell.classList.add('button_eraser');
+        cell.classList. toggle('button_eraser');
         cell.addEventListener('mouseover', function (evt) {
             if (evt.buttons === 1) { // check if left button clicked!
                 cell.classList.toggle('cell_active');
